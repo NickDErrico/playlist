@@ -2,10 +2,87 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <style media="screen">
+
+    body {
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .row {
+      margin-bottom: -20px;
+    }
+
+    .header {
+      height: 2.4rem;
+    }
+
+    .row {
+      margin-bottom: 0;
+    }
+
+    .right-panel {
+      margin: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
+      opacity: 19%;
+      float: left;
+    }
+
+    .left-panel {
+      margin: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
+      float: right;
+    }
+
+    .railroad {
+      opacity: 0.2;
+      margin: 0;
+    }
+
+    .choose_tracks {
+      font: Avenir;
+      font-size: 2.4rem;
+      height: 100vh;
+    }
+
+    .btn {
+      font: Avenir;
+    }
+
+    .footer {
+      height: 2.4rem;
+    }
+
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="app.js">
+
+    </script>
+    <title>Playlist</title>
   </head>
   <body>
-      
+      <header class="header grey"></header>
+      <div class="row valign-wrapper">
+          <div class="col s6 right-panel grey lighten-2 center-align">
+            <div class="choose_tracks deep-purple-text darken-4 valign-wrapper">track bin
+              <a class="waves-effect waves-light grey darken-3 btn">choose tracks</a>
+            </div>
+          </div>
+          <div class="col s6 left-panel">
+            <img class="railroad responsive-img"src="resources/track.jpg" alt="tracks">
+          </div>
+      </div>
+      <div class="footer-div">
+        <footer class="footer grey">&copy; Nick D'Errico</footer>
+      </div>
 
   </body>
 </html>
