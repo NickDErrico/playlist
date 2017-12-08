@@ -8,7 +8,6 @@
     body {
       margin: 0px;
       padding: 0px;
-
     }
 
     .header {
@@ -38,27 +37,35 @@
     }
 
     .album-showcase {
-      display: flex;
+      align-items: center;
+      display: inline-flex;
       flex-direction: row;
+      height: 200px;
+      justify-content: center;
+      overflow-x: scroll;
+      width: 100%;
+    }
+
+     .albumArt {
       height: 100px;
-      overflow-y: auto;
+      margin: 0px 30px;
+      width: 100px;
     }
 
-    .card {
-      flex: 0 0 auto;
-    }
-
-    .album-info {
+    .album-info-container {
       background-color: #EEEEEE;
       display: flex;
       outline: 1px solid black;
       height: 150px;
       margin-top: 40px;
       margin-left: 5%;
+      overflow-y: scroll;
       width: 90%;
     }
 
-    .album-info span {
+     span p{
+       margin: 0;
+       padding: 0;
     }
 
     .album-info-buttons {
@@ -109,23 +116,18 @@
         <div class="album-showcase">
           <div>
 
-            <div class="card"><h2>Card</h2></div>
-            <div class="card"><h2>Card</h2></div>
-            <div class="card"><h2>Card</h2></div>
-            <div class="card"><h2>Card</h2></div>
-            <div class="card"><h2>Card</h2></div>
-            <div class="card"><h2>Card</h2></div>
-            <div class="card"><h2>Card</h2></div>
-            <div class="card"><h2>Card</h2></div>
-            <div class="card"><h2>Card</h2></div>
+            <img class="albumArt one" src="" alt="">
+            <img class="albumArt two" src="" alt="">
+            <img class="albumArt three" src="" alt="">
+            <img class="albumArt four" src="" alt="">
+            <img class="albumArt five" src="" alt="">
+
 
           </div>
         </div>
 
-        <div class="album-info">
-          <div>
-
-            <span>sample</span>
+        <div class="album-info-container">
+          <div class="album-info">
 
           </div>
         </div>
