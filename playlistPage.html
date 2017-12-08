@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Playlist</title>
+    <style media="screen">
+
+    body {
+      margin: 0px;
+      padding: 0px;
+
+    }
+
+    .header {
+      flex-grow: 1;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      align-items: stretch;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .album-header {
+      background-color: #9A9C8C;
+      color: #FFFFFF;
+      flex-grow: 1;
+      font-size: 1.6rem;
+      height: 150px;
+      position: relative;
+    }
+
+    .album-header span{
+      position: absolute;
+      bottom: 0px;
+      left: 40px;
+    }
+
+    .album-showcase {
+      display: flex;
+      flex-direction: row;
+      height: 100px;
+      overflow-y: auto;
+    }
+
+    .card {
+      flex: 0 0 auto;
+    }
+
+    .album-info {
+      background-color: #EEEEEE;
+      display: flex;
+      outline: 1px solid black;
+      height: 150px;
+      margin-top: 40px;
+      margin-left: 5%;
+      width: 90%;
+    }
+
+    .album-info span {
+    }
+
+    .album-info-buttons {
+      align-items: center;
+      display: flex;
+      margin-left: 5%;
+      margin-top: 20px;
+    }
+
+    .album-info-buttons button {
+      background-color: #343625;
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    .footer {
+      background-color: #676958;
+      bottom: 0;
+      color: #DADAD7;
+      font-size: 1.6rem;
+      height: 2.4rem;
+      padding-left: 5rem;
+      position: absolute;
+      width: 94.45%;
+    }
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="playlistPage.js"></script>
+
+  </head>
+  <body>
+    <header class="header">PLAYLIST PAGE:</header>
+    <div class="container">
+      <div>
+
+        <div class="album-header">
+          <div>
+
+          <span>Click an album to add its tracks to the bin</span>
+
+          </div>
+        </div>
+        <div class="album-showcase">
+          <div>
+
+            <div class="card"><h2>Card</h2></div>
+            <div class="card"><h2>Card</h2></div>
+            <div class="card"><h2>Card</h2></div>
+            <div class="card"><h2>Card</h2></div>
+            <div class="card"><h2>Card</h2></div>
+            <div class="card"><h2>Card</h2></div>
+            <div class="card"><h2>Card</h2></div>
+            <div class="card"><h2>Card</h2></div>
+            <div class="card"><h2>Card</h2></div>
+
+          </div>
+        </div>
+
+        <div class="album-info">
+          <div>
+
+            <span>sample</span>
+
+          </div>
+        </div>
+
+        <div class="album-info-buttons">
+          <div>
+
+          <button type="button" name="clear-tracks">clear tracks</button>
+          <button type="button" name="submit-bin">submit bin</button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <footer class="footer">&copy; 2017 Nick D'Errico</footer>
+  </body>
+</html>

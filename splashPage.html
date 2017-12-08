@@ -4,6 +4,12 @@
     <meta charset="utf-8">
     <title>Splash Page</title>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="splashPage.js"></script>
+
     <style media="screen">
 
     body {
@@ -51,46 +57,42 @@
       flex-grow: 1;
     }
 
-    .railroad-container {
-      display: flex;
-      margin: 0;
-      padding: 0;
-    }
 
     .railroad {
-      display: inherit;
-      flex-direction: column;
       min-width: 100%;
       height: 100vh;
       opacity: .19;
-      z-index: 1;
     }
 
     .railroad-container {
       align-items: center;
-      display: flex;
+      display: inline-flex;
       flex-direction: column;
       justify-content: center;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
       z-index:auto;
     }
 
-    .album-list {
-      align-items: center;
-      display: inline-flex;
-      flex-direction: column;
-      z-index: 2;
-    }
 
-    .album:first-child {
-      margin-top: 30px;
-    }
 
     .album {
       height: 210px;
       margin-bottom: 25px;
+      position: absolute;
       width: 210px;
+      z-index: 999;
     }
 
+    .one {
+      margin-top: 30px;
+      top: 0;
+    }
+
+    .three {
+      bottom: 0px;
+    }
 
     .footer {
       background-color: #9A9C8C;
@@ -102,31 +104,31 @@
 
     </style>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-
-    <script type="text/javascript" src="app.js"></script>
-
   </head>
   <body>
     <div class="header"></div>
     <div class="container">
 
-        <div class="left-panel">
-          <p>track bin<p><button type="button" name="choose tracks">choose tracks</button>
-        </div>
-        <div class="right-panel">
-            <div class="railroad-container">
-              <img class="railroad"src="resources/track.jpg" alt="tracks">
-              <div class="album-list">
-                <img class="album" src="" alt="">
-                <img class="album" src="" alt="">
-                <img class="album" src="" alt="">
-            </div>
-          </div>
+      <div class="left-panel">
+        <div>
+
+          <p>track bin<p><button type="button" class="tracks-button" name="choose-tracks">choose tracks</button>
+
         </div>
       </div>
+      <div class="right-panel">
+        <div>
+
+          <div class="railroad-container">
+            <img class="railroad"src="resources/track.jpg" alt="tracks">
+            <img class="album one" src="" alt="">
+            <img class="album two" src="" alt="">
+            <img class="album three" src="" alt="">
+          </div>
+
+        </div>
+      </div>
+    </div>
 
     <div class="footer">&copy; 2017 Nick D'Errico</div>
   </body>
