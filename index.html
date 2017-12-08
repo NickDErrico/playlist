@@ -2,87 +2,132 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <title>Splash Page</title>
+
     <style media="screen">
 
     body {
-      height: 100%;
       margin: 0px;
       padding: 0px;
     }
 
-    .row {
-      margin-bottom: -20px;
-    }
-
     .header {
+      background-color: #9A9C8C;
+      border-bottom: 1px solid black;
       height: 2.4rem;
     }
 
-    .row {
-      margin-bottom: 0;
-    }
-
-    .right-panel {
-      margin: 0px;
-      padding-left: 0px;
-      padding-right: 0px;
-      opacity: 19%;
-      float: left;
-    }
-
-    .left-panel {
-      margin: 0px;
-      padding-left: 0px;
-      padding-right: 0px;
-      float: right;
-    }
-
-    .railroad {
-      opacity: 0.2;
-      margin: 0;
-    }
-
-    .choose_tracks {
-      font: Avenir;
-      font-size: 2.4rem;
+    .container {
+      align-items: stretch;
+      display: flex;
       height: 100vh;
     }
 
-    .btn {
-      font: Avenir;
+    .left-panel {
+      align-items: center;
+      background-color: #EEEEEE;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 4;
+      justify-content: center;
     }
+
+    p {
+      color: #580066;
+      font-size: 3.6rem;
+      text-align: center;
+      margin: 0;
+    }
+
+    button {
+      background-color: #343625;
+      border-radius: 10px;
+      color: #DADAD7;
+      font-size: 2.4rem;
+      margin: 0;
+    }
+
+    .right-panel {
+      flex-grow: 1;
+    }
+
+    .railroad-container {
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .railroad {
+      display: inherit;
+      flex-direction: column;
+      min-width: 100%;
+      height: 100vh;
+      opacity: .19;
+      z-index: 1;
+    }
+
+    .railroad-container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      z-index:auto;
+    }
+
+    .album-list {
+      align-items: center;
+      display: inline-flex;
+      flex-direction: column;
+      z-index: 2;
+    }
+
+    .album:first-child {
+      margin-top: 30px;
+    }
+
+    .album {
+      height: 210px;
+      margin-bottom: 25px;
+      width: 210px;
+    }
+
 
     .footer {
+      background-color: #9A9C8C;
+      color: #DADAD7;
+      font-size: 1.6rem;
       height: 2.4rem;
+      padding-left: 5rem;
     }
 
-
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
-    <script type="text/javascript" src="app.js">
 
-    </script>
-    <title>Playlist</title>
+    <script type="text/javascript" src="app.js"></script>
+
   </head>
   <body>
-      <header class="header grey"></header>
-      <div class="row valign-wrapper">
-          <div class="col s6 right-panel grey lighten-2 center-align">
-            <div class="choose_tracks deep-purple-text darken-4 valign-wrapper">track bin
-              <a class="waves-effect waves-light grey darken-3 btn">choose tracks</a>
+    <div class="header"></div>
+    <div class="container">
+
+        <div class="left-panel">
+          <p>track bin<p><button type="button" name="choose tracks">choose tracks</button>
+        </div>
+        <div class="right-panel">
+            <div class="railroad-container">
+              <img class="railroad"src="resources/track.jpg" alt="tracks">
+              <div class="album-list">
+                <img class="album" src="" alt="">
+                <img class="album" src="" alt="">
+                <img class="album" src="" alt="">
             </div>
           </div>
-          <div class="col s6 left-panel">
-            <img class="railroad responsive-img"src="resources/track.jpg" alt="tracks">
-          </div>
-      </div>
-      <div class="footer-div">
-        <footer class="footer grey">&copy; Nick D'Errico</footer>
+        </div>
       </div>
 
+    <div class="footer">&copy; 2017 Nick D'Errico</div>
   </body>
 </html>
