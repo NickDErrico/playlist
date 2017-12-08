@@ -38,12 +38,17 @@
 
     .album-showcase {
       align-items: center;
-      display: inline-flex;
+      display: flex;
       flex-direction: row;
+      flex-wrap: nowrap;
       height: 200px;
       justify-content: center;
-      overflow-x: scroll;
+      overflow-x: auto;
       width: 100%;
+    }
+
+    .album-showcase img {
+      flex: 0 0 auto;
     }
 
      .albumArt {
@@ -61,11 +66,6 @@
       margin-left: 5%;
       overflow-y: scroll;
       width: 90%;
-    }
-
-     span p{
-       margin: 0;
-       padding: 0;
     }
 
     .album-info-buttons {
