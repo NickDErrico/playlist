@@ -51,7 +51,7 @@
       flex: 0 0 auto;
     }
 
-     .albumArt {
+     .album-art {
       height: 100px;
       margin: 0px 30px;
       width: 100px;
@@ -98,7 +98,7 @@
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="playlistPage.js"></script>
+    <script type="text/javascript" defer src="playlistPage.js"></script>
 
   </head>
   <body>
@@ -114,13 +114,13 @@
           </div>
         </div>
         <div class="album-showcase">
-          <div>
+          <div class="album-art-container">
 
-            <img class="albumArt one" src="" alt="">
+            <!-- <img class="albumArt o" src="" alt="">
             <img class="albumArt two" src="" alt="">
             <img class="albumArt three" src="" alt="">
             <img class="albumArt four" src="" alt="">
-            <img class="albumArt five" src="" alt="">
+            <img class="albumArt five" src="" alt=""> -->
 
 
           </div>
@@ -135,8 +135,8 @@
         <div class="album-info-buttons">
           <div>
 
-          <button type="button" name="clear-tracks">clear tracks</button>
-          <button type="button" name="submit-bin">submit bin</button>
+          <button type="button" class="clear-tracks" name="clear-tracks">clear tracks</button>
+          <button type="button" class="submit-bin" name="submit-bin">submit bin</button>
 
           </div>
         </div>
